@@ -12,9 +12,9 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
-  irAPaises() {
+  goToBirdsList() {
 
-      this.router.navigate(['/paises']);
+      this.router.navigate(['/birds-list']);
 
   }
 }

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Aves de Guatemala</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let bird of birds">
+      <ion-thumbnail slot="start">
+
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ bird.name }}</h2>
+        <p>Familia: {{ bird.family }}</p>
+        <p>Ubicación: {{ bird.location }}</p>
+        <p>Descubridor: {{ bird.discoverer }}</p>
+      </ion-label>
+      <ion-button slot="end" (click)="playSound(bird.sound)">
+        <ion-icon name="play"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
